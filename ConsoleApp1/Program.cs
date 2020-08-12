@@ -21,6 +21,8 @@ namespace ConsoleApp1
 
             //fich 1
             int t = 0;
+
+            //hotfix_2
         }
     }
 }
