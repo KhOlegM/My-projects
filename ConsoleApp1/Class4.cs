@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Class1
+    class Class4
     {
-        int t_hotfix_1 = 0;
     }
 }
