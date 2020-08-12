@@ -15,6 +15,9 @@ namespace ConsoleApp1
             int j = 0;
 
             int test1 = 0;
+
+            //tem branch 1
+            int k = 0;
         }
     }
 }
