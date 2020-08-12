@@ -13,6 +13,14 @@ namespace ConsoleApp1
             int i = 0;
 
             int j = 0;
+
+            int test1 = 0;
+
+            //tem branch 1
+            int k = 0;
+
+            //fich 1
+            int t = 0;
         }
     }
 }
