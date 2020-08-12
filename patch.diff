@@ -1,0 +1,25 @@
+From c697a055429a2cc9f2972a359f95933de2e200f9 Mon Sep 17 00:00:00 2001
+From: Oleg Khromuliak <oleg.chromulyak@gmail.com>
+Date: Wed, 12 Aug 2020 17:27:43 +0300
+Subject: [PATCH] int test1 = 0
+
+---
+ ConsoleApp1/Program.cs | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/ConsoleApp1/Program.cs b/ConsoleApp1/Program.cs
+index b9aa847..77a665b 100644
+--- a/ConsoleApp1/Program.cs
++++ b/ConsoleApp1/Program.cs
+@@ -13,6 +13,8 @@ namespace ConsoleApp1
+             int i = 0;
+ 
+             int j = 0;
++
++            int test1 = 0;
+         }
+     }
+ }
+-- 
+2.26.2.windows.1
+
