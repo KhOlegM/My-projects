@@ -11,11 +11,16 @@ using DevExpress.XtraEditors;
 
 namespace WindowsFormsApp3
 {
-    public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
+    public partial class VerifiedMobilesForm : DevExpress.XtraEditors.XtraForm
     {
-        public XtraForm1()
+        public VerifiedMobilesForm()
         {
             InitializeComponent();
+        }
+
+        private void treeListDepart_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class XtraForm1
+    partial class VerifiedMobilesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,10 @@
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.treeListDepart = new DevExpress.XtraTreeList.TreeList();
+            this.tlcId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.tlcName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.treeListFilial = new DevExpress.XtraTreeList.TreeList();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -41,8 +45,10 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.splitterItem1 = new DevExpress.XtraLayout.SplitterItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup11 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -50,23 +56,23 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.treeListFilial = new DevExpress.XtraTreeList.TreeList();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.treeListDepart = new DevExpress.XtraTreeList.TreeList();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.treeListDepart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeListFilial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -74,10 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeListFilial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeListDepart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -137,6 +139,46 @@
             this.layoutControl1.Size = new System.Drawing.Size(288, 453);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // treeListDepart
+            // 
+            this.treeListDepart.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
+            this.tlcId,
+            this.tlcName});
+            this.treeListDepart.Location = new System.Drawing.Point(18, 40);
+            this.treeListDepart.Name = "treeListDepart";
+            this.treeListDepart.OptionsBehavior.PopulateServiceColumns = true;
+            this.treeListDepart.OptionsFind.AllowIncrementalSearch = true;
+            this.treeListDepart.OptionsFind.AlwaysVisible = true;
+            this.treeListDepart.OptionsView.ShowIndicator = false;
+            this.treeListDepart.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.Default;
+            this.treeListDepart.Size = new System.Drawing.Size(252, 252);
+            this.treeListDepart.TabIndex = 8;
+            this.treeListDepart.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeListDepart_FocusedNodeChanged);
+            // 
+            // tlcId
+            // 
+            this.tlcId.Caption = "id";
+            this.tlcId.FieldName = "id";
+            this.tlcId.Name = "tlcId";
+            // 
+            // tlcName
+            // 
+            this.tlcName.AppearanceHeader.Options.UseTextOptions = true;
+            this.tlcName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.tlcName.Caption = "Название";
+            this.tlcName.FieldName = "Название";
+            this.tlcName.Name = "tlcName";
+            this.tlcName.Visible = true;
+            this.tlcName.VisibleIndex = 0;
+            this.tlcName.Width = 20;
+            // 
+            // treeListFilial
+            // 
+            this.treeListFilial.Location = new System.Drawing.Point(18, 40);
+            this.treeListFilial.Name = "treeListFilial";
+            this.treeListFilial.Size = new System.Drawing.Size(252, 252);
+            this.treeListFilial.TabIndex = 7;
             // 
             // textEdit1
             // 
@@ -217,6 +259,25 @@
             this.layoutControlGroup3,
             this.layoutControlGroup4});
             // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.CustomizationFormText = "Tab1";
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem7});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(256, 256);
+            this.layoutControlGroup3.Text = "Орг. структура";
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.treeListDepart;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(256, 256);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
             // layoutControlGroup4
             // 
             this.layoutControlGroup4.CustomizationFormText = "Tab2";
@@ -227,15 +288,14 @@
             this.layoutControlGroup4.Size = new System.Drawing.Size(256, 256);
             this.layoutControlGroup4.Text = "Филиалы";
             // 
-            // layoutControlGroup3
+            // layoutControlItem6
             // 
-            this.layoutControlGroup3.CustomizationFormText = "Tab1";
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem7});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(256, 256);
-            this.layoutControlGroup3.Text = "Орг. структура";
+            this.layoutControlItem6.Control = this.treeListFilial;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(256, 256);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlGroup11
             // 
@@ -318,59 +378,31 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // treeListFilial
-            // 
-            this.treeListFilial.Location = new System.Drawing.Point(18, 40);
-            this.treeListFilial.Name = "treeListFilial";
-            this.treeListFilial.Size = new System.Drawing.Size(252, 252);
-            this.treeListFilial.TabIndex = 7;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.treeListFilial;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(256, 256);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
-            // treeListDepart
-            // 
-            this.treeListDepart.Location = new System.Drawing.Point(18, 40);
-            this.treeListDepart.Name = "treeListDepart";
-            this.treeListDepart.Size = new System.Drawing.Size(252, 252);
-            this.treeListDepart.TabIndex = 8;
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.treeListDepart;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(256, 256);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
-            // 
-            // XtraForm1
+            // VerifiedMobilesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 480);
             this.Controls.Add(this.dockPanel1);
-            this.Name = "XtraForm1";
+            this.Name = "VerifiedMobilesForm";
             this.ShowIcon = false;
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.treeListDepart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeListFilial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -378,10 +410,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeListFilial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeListDepart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -413,5 +441,7 @@
         private DevExpress.XtraTreeList.TreeList treeListFilial;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn tlcId;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn tlcName;
     }
 }
