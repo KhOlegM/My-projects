@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -56,6 +57,16 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colINN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.collastName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colfirstName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmiddleName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colfullName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dataSetCUB = new WindowsFormsApp3.DataSetCUB();
+            this.peopleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.peopleTableAdapter = new WindowsFormsApp3.DataSetCUBTableAdapters.PeopleTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -80,6 +91,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -378,14 +393,90 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.peopleBindingSource;
+            gridLevelNode1.RelationName = "Level1";
+            this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+            this.gridControl1.Location = new System.Drawing.Point(298, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(679, 476);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colINN,
+            this.collastName,
+            this.colfirstName,
+            this.colmiddleName,
+            this.colfullName});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // colINN
+            // 
+            this.colINN.FieldName = "INN";
+            this.colINN.Name = "colINN";
+            this.colINN.Visible = true;
+            this.colINN.VisibleIndex = 0;
+            // 
+            // collastName
+            // 
+            this.collastName.FieldName = "lastName";
+            this.collastName.Name = "collastName";
+            this.collastName.Visible = true;
+            this.collastName.VisibleIndex = 1;
+            // 
+            // colfirstName
+            // 
+            this.colfirstName.FieldName = "firstName";
+            this.colfirstName.Name = "colfirstName";
+            this.colfirstName.Visible = true;
+            this.colfirstName.VisibleIndex = 2;
+            // 
+            // colmiddleName
+            // 
+            this.colmiddleName.FieldName = "middleName";
+            this.colmiddleName.Name = "colmiddleName";
+            this.colmiddleName.Visible = true;
+            this.colmiddleName.VisibleIndex = 3;
+            // 
+            // colfullName
+            // 
+            this.colfullName.FieldName = "fullName";
+            this.colfullName.Name = "colfullName";
+            this.colfullName.Visible = true;
+            this.colfullName.VisibleIndex = 4;
+            // 
+            // dataSetCUB
+            // 
+            this.dataSetCUB.DataSetName = "DataSetCUB";
+            this.dataSetCUB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // peopleBindingSource
+            // 
+            this.peopleBindingSource.DataMember = "People";
+            this.peopleBindingSource.DataSource = this.dataSetCUB;
+            // 
+            // peopleTableAdapter
+            // 
+            this.peopleTableAdapter.ClearBeforeFill = true;
+            // 
             // VerifiedMobilesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 480);
+            this.ClientSize = new System.Drawing.Size(978, 480);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.dockPanel1);
             this.Name = "VerifiedMobilesForm";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.VerifiedMobilesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
@@ -410,6 +501,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -443,5 +538,15 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraTreeList.Columns.TreeListColumn tlcId;
         private DevExpress.XtraTreeList.Columns.TreeListColumn tlcName;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colINN;
+        private DevExpress.XtraGrid.Columns.GridColumn collastName;
+        private DevExpress.XtraGrid.Columns.GridColumn colfirstName;
+        private DevExpress.XtraGrid.Columns.GridColumn colmiddleName;
+        private DevExpress.XtraGrid.Columns.GridColumn colfullName;
+        private DataSetCUB dataSetCUB;
+        private System.Windows.Forms.BindingSource peopleBindingSource;
+        private DataSetCUBTableAdapters.PeopleTableAdapter peopleTableAdapter;
     }
 }
