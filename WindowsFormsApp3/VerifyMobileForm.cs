@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace WindowsFormsApp3
 {
-    public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
+    public partial class VerifyMobileForm : DevExpress.XtraEditors.XtraForm
     {
-        public XtraForm1()
+        public VerifyMobileForm()
         {
             InitializeComponent();
         }
