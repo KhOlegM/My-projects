@@ -25,10 +25,22 @@ namespace WindowsFormsApp3
 
         private void VerifiedMobilesForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSetCUB.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.dataSetCUB.Users);
             // TODO: This line of code loads data into the 'dataSetCUB.People' table. You can move, or remove it, as needed.
             this.peopleTableAdapter.Fill(this.dataSetCUB.People);
             // TODO: This line of code loads data into the 'dataSetCUB.People' table. You can move, or remove it, as needed.
             this.peopleTableAdapter.Fill(this.dataSetCUB.People);
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
