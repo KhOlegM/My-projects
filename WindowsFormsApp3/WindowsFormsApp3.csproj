@@ -82,6 +82,12 @@
     <Compile Include="SuffixUPNEditForm.Designer.cs">
       <DependentUpon>SuffixUPNEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestLayout.Designer.cs">
+      <DependentUpon>TestLayout.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerifyMobileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="SuffixUPNEditForm.resx">
       <DependentUpon>SuffixUPNEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestLayout.resx">
+      <DependentUpon>TestLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerifiedMobilesForm.resx">
       <DependentUpon>VerifiedMobilesForm.cs</DependentUpon>

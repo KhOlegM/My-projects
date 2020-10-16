@@ -50,5 +50,15 @@ namespace WindowsFormsApp3
             var row = ((DataRowView)e.Row).Row.ItemArray;
             this.suffixUPNTableAdapter.Delete((int)row[0], row[1].ToString(), (bool)row[2], row[3].ToString()=="" ? null : row[3].ToString());
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lookUpEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
