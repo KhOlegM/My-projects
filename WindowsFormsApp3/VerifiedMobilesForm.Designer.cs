@@ -58,15 +58,31 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.peopleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetCUB = new WindowsFormsApp3.DataSetCUB();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colINN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.collastName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfirstName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmiddleName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfullName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dataSetCUB = new WindowsFormsApp3.DataSetCUB();
-            this.peopleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.peopleTableAdapter = new WindowsFormsApp3.DataSetCUBTableAdapters.PeopleTableAdapter();
+            this.cmb = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new WindowsFormsApp3.DataSetCUBTableAdapters.UsersTableAdapter();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.peopleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetCUBBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetCUBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.dataSetCUBBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -92,9 +108,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUBBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUBBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -402,10 +432,20 @@
             this.gridControl1.Location = new System.Drawing.Point(298, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(679, 476);
+            this.gridControl1.Size = new System.Drawing.Size(441, 332);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // peopleBindingSource
+            // 
+            this.peopleBindingSource.DataMember = "People";
+            this.peopleBindingSource.DataSource = this.dataSetCUB;
+            // 
+            // dataSetCUB
+            // 
+            this.dataSetCUB.DataSetName = "DataSetCUB";
+            this.dataSetCUB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -453,27 +493,150 @@
             this.colfullName.Visible = true;
             this.colfullName.VisibleIndex = 4;
             // 
-            // dataSetCUB
-            // 
-            this.dataSetCUB.DataSetName = "DataSetCUB";
-            this.dataSetCUB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // peopleBindingSource
-            // 
-            this.peopleBindingSource.DataMember = "People";
-            this.peopleBindingSource.DataSource = this.dataSetCUB;
-            // 
             // peopleTableAdapter
             // 
             this.peopleTableAdapter.ClearBeforeFill = true;
+            // 
+            // cmb
+            // 
+            this.cmb.AllowDrop = true;
+            this.cmb.EditValue = "<Null>";
+            this.cmb.Location = new System.Drawing.Point(771, 12);
+            this.cmb.Name = "cmb";
+            this.cmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmb.Properties.DropDownItemHeight = 100;
+            this.cmb.Properties.PopupFormMinSize = new System.Drawing.Size(100, 100);
+            this.cmb.Properties.PopupFormSize = new System.Drawing.Size(100, 100);
+            this.cmb.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmb.Size = new System.Drawing.Size(120, 20);
+            this.cmb.TabIndex = 3;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.dataSetCUB;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.AllowDrop = true;
+            this.comboBoxEdit1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "Age", true));
+            this.comboBoxEdit1.Location = new System.Drawing.Point(803, 83);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(50, 20);
+            this.comboBoxEdit1.TabIndex = 5;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.dataSetCUB;
+            // 
+            // comboBoxEdit2
+            // 
+            this.comboBoxEdit2.Location = new System.Drawing.Point(816, 195);
+            this.comboBoxEdit2.Name = "comboBoxEdit2";
+            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit2.Properties.Items.AddRange(new object[] {
+            "11111",
+            "22222222222",
+            "3333333333333",
+            "444444444444444444",
+            "55555555555555555"});
+            this.comboBoxEdit2.Size = new System.Drawing.Size(100, 20);
+            this.comboBoxEdit2.TabIndex = 7;
+            // 
+            // peopleBindingSource1
+            // 
+            this.peopleBindingSource1.DataMember = "People";
+            this.peopleBindingSource1.DataSource = this.dataSetCUB;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "Name", true));
+            this.comboBox1.DataSource = this.usersBindingSource4;
+            this.comboBox1.DisplayMember = "Name";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(803, 344);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 9;
+            this.comboBox1.ValueMember = "Id";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // usersBindingSource4
+            // 
+            this.usersBindingSource4.DataMember = "Users";
+            this.usersBindingSource4.DataSource = this.dataSetCUBBindingSource1;
+            // 
+            // dataSetCUBBindingSource1
+            // 
+            this.dataSetCUBBindingSource1.DataSource = this.dataSetCUB;
+            this.dataSetCUBBindingSource1.Position = 0;
+            // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "Users";
+            this.usersBindingSource2.DataSource = this.dataSetCUB;
+            // 
+            // dataSetCUBBindingSource
+            // 
+            this.dataSetCUBBindingSource.DataSource = this.dataSetCUB;
+            this.dataSetCUBBindingSource.Position = 0;
+            // 
+            // usersBindingSource3
+            // 
+            this.usersBindingSource3.DataMember = "Users";
+            this.usersBindingSource3.DataSource = this.dataSetCUBBindingSource;
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.usersBindingSource1, "Name", true));
+            this.lookUpEdit1.Location = new System.Drawing.Point(475, 378);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.DataSource = this.usersBindingSource1;
+            this.lookUpEdit1.Properties.DisplayMember = "Name";
+            this.lookUpEdit1.Properties.PopupSizeable = false;
+            this.lookUpEdit1.Properties.ValueMember = "Id";
+            this.lookUpEdit1.Size = new System.Drawing.Size(350, 20);
+            this.lookUpEdit1.TabIndex = 11;
+            // 
+            // dataSetCUBBindingSource2
+            // 
+            this.dataSetCUBBindingSource2.DataSource = this.dataSetCUB;
+            this.dataSetCUBBindingSource2.Position = 0;
+            // 
+            // checkEdit1
+            // 
+            this.checkEdit1.Location = new System.Drawing.Point(346, 379);
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Caption = "checkEdit1";
+            this.checkEdit1.Size = new System.Drawing.Size(123, 19);
+            this.checkEdit1.TabIndex = 13;
+            this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
             // 
             // VerifiedMobilesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 480);
+            this.Controls.Add(this.checkEdit1);
+            this.Controls.Add(this.lookUpEdit1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxEdit2);
+            this.Controls.Add(this.cmb);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.dockPanel1);
+            this.Controls.Add(this.comboBoxEdit1);
             this.Name = "VerifiedMobilesForm";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.VerifiedMobilesForm_Load);
@@ -502,9 +665,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUBBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCUBBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -548,5 +725,21 @@
         private DataSetCUB dataSetCUB;
         private System.Windows.Forms.BindingSource peopleBindingSource;
         private DataSetCUBTableAdapters.PeopleTableAdapter peopleTableAdapter;
+        private DevExpress.XtraEditors.ComboBoxEdit cmb;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private DataSetCUBTableAdapters.UsersTableAdapter usersTableAdapter;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private System.Windows.Forms.BindingSource peopleBindingSource1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource usersBindingSource2;
+        private System.Windows.Forms.BindingSource usersBindingSource3;
+        private System.Windows.Forms.BindingSource dataSetCUBBindingSource;
+        private System.Windows.Forms.BindingSource usersBindingSource4;
+        private System.Windows.Forms.BindingSource dataSetCUBBindingSource1;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private System.Windows.Forms.BindingSource dataSetCUBBindingSource2;
+        private DevExpress.XtraEditors.CheckEdit checkEdit1;
     }
 }

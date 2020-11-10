@@ -62,7 +62,7 @@ namespace WebApiApp
                 //c.IncludeXmlComments(xmlPath);
             });
 
-            string con = "Data Source=DESKTOP-P8S4QQJ;Initial Catalog=CUB;Integrated Security=True";
+            string con = "Data Source=ASYA-2020\\SQLSERVERINST;Initial Catalog=CUB;Integrated Security=True";
             // устанавливаем контекст данных
             services.AddDbContext<UsersContext>(options => options.UseSqlServer(con));
 
