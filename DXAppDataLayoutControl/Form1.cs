@@ -14,6 +14,9 @@ namespace DXAppDataLayoutControl
     /// </summary>
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
